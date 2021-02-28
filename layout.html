@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>catloaf Homepage</title>
+ <link rel="stylesheet" type="text/css" href="layout.css">
+</head>
+<body>
+<!--ui object -->
+<div id="wrap">
+<!--header -->
+<div id="header">
+	<p class="test"><a href="layout.html"><span>Hunt for Data</a></span></p>
+</div>
+<!--container -->
+<div id="container">
+	<p></p>
+	<nav class="nav center">
+		<ul>
+			<li class="current"><a href="layout.html">Home</a></li>
+			<li><a href="Profile.html">Profile</a></li>
+			<li><a href="portfolio.html">Portfolio</a></li>
+			<li><a href="Travel.html">Travel</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</nav>
+<!--content -->
+<div id="content">
+	<p>I switched careers at 31 to became a Data Analyst</p>
+	<br><br>
+	<img src="media/img1.jpg" onload="resize(this)">
+</div>
+<!--aside -->
+<div class="aside">
+	<p>SNS</p>
+	  <table hidden="440px">
+    <tr>
+     <p align="center">
+      <br>
+      <a href="https://github.com/areum120">Github</a><br><br>
+      <a href="https://www.facebook.com/areum.lee.3762">Facebook</a><br><br>
+      <a href="http://instagram/arlee1201">Instagram</a><br><br>
+      <a href="https://catloaf.tistory.com/">blog</a><br><br>
+     </p>
+    </tr>
+   </table>	
+</div>
+<!--//container -->
+<!--footer -->
+<div id="footer">
+	<p><h3>CONTACT ME</h3></p>
+	<form>
+		<label>
+			<span>Name</span><input type="text" placeholder="catloaf">
+		</label>
+		<label>
+			<span>Email</span><input type="email" placeholder="tjfsu120@gmail.com">
+		</label>
+		<label>
+			<span>Comment</span><textarea placeholder="send a message"></textarea>
+		</label>
+		<label>
+			<span></span><input type="submit" value="submit">
+		</label>		
+	</form>
+</div>
+<!--//footer -->
+</div>
+
+<!--//ui object -->
+</div>
+<script>
+
+function resize(img){
+
+	   // 원본 이미지 사이즈 저장
+	   var width = img.width;
+	   var height = img.height;
+
+	   // 가로, 세로 최대 사이즈 설정
+	   var maxWidth = width * 0.5;   // 원하는대로 설정. 픽셀로 하려면 maxWidth = 100  이런 식으로 입력
+	   var maxHeight = height * 0.5;   // 원래 사이즈 * 0.5 = 50%
+
+	   // 가로나 세로의 길이가 최대 사이즈보다 크면 실행  
+	   if(width > maxWidth || height > maxHeight){
+
+	      // 가로가 세로보다 크면 가로는 최대사이즈로, 세로는 비율 맞춰 리사이즈
+	      if(width > height){
+	         resizeWidth = maxWidth;
+	         resizeHeight = Math.Round((height * resizeWidth) / width);
+
+	      // 세로가 가로보다 크면 세로는 최대사이즈로, 가로는 비율 맞춰 리사이즈
+	      }else{
+	         resizeHeight = maxHeight;
+	         resizeWidth = Math.Round((width * resizeHeight) / height);
+	      }
+
+	   // 최대사이즈보다 작으면 원본 그대로
+	   }else{
+	      resizeWidth = width;
+	      resizeHeight = height;
+	   }
+
+	   // 리사이즈한 크기로 이미지 크기 다시 지정
+	   img.width = resizeWidth;
+	   img.height = resizeHeight;
+	}
+
+</script>
+
+</body>
+</html>
